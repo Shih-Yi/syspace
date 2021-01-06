@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'home', to: "home#index", constraints: { subdomain: 'aaa' }
+  root to: "home#index"
+
+  constraints subdomain: 'practice' do
+    get '/', to: 'practice#index'
+  end
+
 end
