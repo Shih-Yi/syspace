@@ -6,9 +6,6 @@ var flightPlanCoordinates = [];
 var coordsArray=[];
 var distanceArray=[];
 
-
-window.onload=getLocation;
-
 function getLocation(){
 	if(navigator.geolocation){
 		//navigator.geolocation.getCurrentPosition(watchLocation);
@@ -218,6 +215,7 @@ var x=0;
 var y=0;
 var z;
 function init(){
+    getLocation();
 		sec=document.getElementById("sec");
 		intervalId= window.setInterval(conuntSec, 1000); 
 		intervalId1= window.setInterval(conuntMin, 60000); 
