@@ -5,5 +5,10 @@ Rails.application.routes.draw do
     get '/', to: 'practice#index'
   end
 
+  constraints subdomain: 'running-app' do
+    get '/', to: 'running_app#index'
+  end
+
   root to: "home#index"
+
 end
