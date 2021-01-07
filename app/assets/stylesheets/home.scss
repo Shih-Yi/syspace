@@ -79,10 +79,9 @@ p{
 	padding: 0;
 	text-align:center;
 	background-color: #fffaaa;
-		background: url(image_path("practice/03.jpg"));
+		background: url(image_path("home/cover2.jpeg"));
 		background-size: cover;
 		background-attachment: scroll;
-		background-position:bottom center;
 		background-repeat:no-repeat;
 }
 	.intro_word{
@@ -106,6 +105,55 @@ p{
 		padding-bottom: 10em;
 	}
 
+	#featured {
+    display: block;
+		position: absolute;
+    width: 1440px;
+    max-width: 100%;
+		height: 600px;
+		top: 730px;
+		left: 0px;
+    margin: 30px auto;
+    background-color: #efefef;
+    overflow: hidden;
+}
+
+.work_img{
+	display: inline-block;
+	width: 700px;
+	height: 350px;
+	overflow: hidden;
+	padding: 0px;
+}
+
+.blurb {
+	width: 60%;
+	text-align: left;
+}
+
+.work_title{
+	font-size: 30px;
+}
+.work_content{
+	font-size: 20px;
+	margin-top: 20px;
+}
+.wrapper {
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 1180px;
+	max-width: 95%;
+	height: 100%;
+	margin: 0 auto;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
 #one{
 	display: block;
 	position: absolute;
@@ -118,12 +166,7 @@ p{
 
 	/*border: white 0.1em solid;*/
 	text-align:center;
-	background-color: #fffaaa;
-		background: url(image_path("practice/07.jpg"));
-		background-size: cover;
-		background-attachment: scroll;
-		background-position:50% 76%;
-		background-repeat: no-repeat;
+	background-color: #efefef;
 }
 	.one_word{
 		display: block;
@@ -155,12 +198,20 @@ p{
 	padding: 0px;
 	/*border: black 5px solid;*/
 	text-align:center;
-	background-color: #fffaaa;
-		background: url(image_path("practice/01.jpg"));
-		background-size: cover;
-		background-attachment: scroll;
-		background-position:center center;
-		background-repeat: no-repeat;
+	background-color: #474747;
+}
+
+#three{
+	position: absolute;
+	width:100%;
+	height: 730px;
+	top: 2190px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	/*border: black 5px solid;*/
+	text-align:center;
+	background-color: #efefef;
 }
 	.two_word{
 		display: block;
@@ -181,11 +232,12 @@ p{
 	.two_word2{
 		padding-bottom: 10em;
 	}
+
 #work{
 	position: absolute;
 	width:100%;
 	height: 1460px;
-	top: 2190px;
+	top: 2920px;
 	left: 0;
 	background-color: #fff;
 	/*border: black 1px solid;*/
@@ -236,12 +288,21 @@ p{
 
 			.image_left{
 				display: inline-block;
-				width: 450px;
+				width: 400px;
 				height: 450px;
 				overflow: hidden;
 				padding: 0px;
 
 			}
+			.image_center{
+				display: inline-block;
+				width: 200px;
+				height: 450px;
+				overflow: hidden;
+				padding: 0px;
+
+			}
+			
 				/*.image_left img{
 				max-width: 100%;
 				height: auto;
@@ -278,7 +339,7 @@ p{
 
 			.image_right{
 				display: inline-block;
-				width: 450px;
+				width: 400px;
 				height: 450px;
 				overflow: hidden;
 				padding: 0px;
