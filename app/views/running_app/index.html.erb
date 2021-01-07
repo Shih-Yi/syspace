@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8" />
-<title>標題</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Running APP</title>
+    <link href="/assets/running_app/reset.scss" media="screen" rel="stylesheet" />
+    <link href="/assets/running_app/style.scss" media="screen" rel="stylesheet" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="/assets/running_app/distance.js"></script>
+  </head>
 
-<body>
-
-<div class="wrapper">
-
-    <header class="h_class">
+  <body>
+    <div class="wrapper">
+      <header class="h_class">
         <div class="left item">
-            <p class="p_color">DISTANCE</p>
-            <h1 id="distance">0m</h1>
-            <div class="face">
+          <p class="p_color">DISTANCE</p>
+          <h1 id="distance">0m</h1>
+          <div class="face">
             <%= image_tag('running_app/smile.png') %>
             <span class="txt">good</span>
-            </div>
+          </div>
         </div>
         <div class="right">
-            <div class="item borderB">
-                <p>TIME</p>
-                <div style="font-size:24px; display: inline-block;" id="min">0</div>
-                <div style="font-size:24px; display: inline-block;">:</div>
-                <div style="font-size:24px; display: inline-block;" id="sec">0</div>
-            </div>
-            <div class="item">
-                <p>CALORIES</p>
-                <h2>821 cal</h2>
-            </div>
+          <div class="item borderB">
+              <p>TIME</p>
+              <div style="font-size:24px; display: inline-block;" id="min">0</div>
+              <div style="font-size:24px; display: inline-block;">:</div>
+              <div style="font-size:24px; display: inline-block;" id="sec">0</div>
+          </div>
+          <div class="item">
+              <p>CALORIES</p>
+              <h2>885 cal</h2>
+          </div>
         </div>
-
-    </header>
+      </header>
 
     <div id="map"></div>
-
-    <div class="btn-wrap">
-        <a href="#" class="btn1" onClick="runningStart();">START</a><a href="#" class="btn2" onClick="clearTimer();">PAUSE</a><a href="#" id="setBtn" class="btn2">設定</a>
+      <div class="btn-wrap">
+        <a class="btn1" onClick="runningStart();">START</a><a class="btn2" onClick="clearTimer();">PAUSE</a><a id="setBtn" class="btn2">SETTING</a>
+      </div>
     </div>
+    <div class="settingBox">
 
-</div>
+    <form>
+      <div class="field">身高：<span class="setin"><input name="" type="text"> 公分</span></div>
+      <div class="field">體重：<span class="setin"><input name="" type="text"> 公斤</span></div>
+      <div class="field">目標：<span class="setin"><input name="" type="text"> 公里</span></div>
+    </form>
+    <input name="" type="button" class="btn3" value="確定">
+  </div>
 
-<div class="settingBox">
-<form>
-<div class="field">身高：<span class="setin"><input name="" type="text"> 公分</span></div>
-<div class="field">體重：<span class="setin"><input name="" type="text"> 公斤</span></div>
-<div class="field">目標：<span class="setin"><input name="" type="text"> 公里</span></div>
-</form>
-<input name="" type="button" class="btn3" value="確定">
-</div>
-
-<script>
-$(document).ready(function(){
-  $("#setBtn").click(function(){
-  $(".settingBox").fadeToggle();
-  });
-});
-$(document).ready(function(){
-  $(".btn3").click(function(){
-  $(".settingBox").fadeToggle();
-  });
-});
-</script>
-</body>
+    <script>
+      $(document).ready(function(){
+          $("#setBtn").click(function(){
+          $(".settingBox").fadeToggle();
+        });
+      });
+      $(document).ready(function(){
+          $(".btn3").click(function(){
+          $(".settingBox").fadeToggle();
+        });
+      });
+    </script>
+  </body>
 </html>
