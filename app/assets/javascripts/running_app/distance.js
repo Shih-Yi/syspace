@@ -1,13 +1,9 @@
-
 var map=null;
 var watchId=null;
 var options={enableHighAccuracy:true, timeout:100, maximumAge:10000};
 var flightPlanCoordinates = [];
 var coordsArray=[];
 var distanceArray=[];
-
-
-window.onload=getLocation;
 
 function getLocation(){
 	if(navigator.geolocation){
@@ -25,7 +21,6 @@ function getLocation(){
 function watchLocation(){
 	watchId=navigator.geolocation.watchPosition(showPosition,displayError,options);
 }
-
 
 function displayError(error) {
 	var errorTypes = {
@@ -85,7 +80,6 @@ function degreesToRadians(degrees) {
   return radians;
 }
 
-
 function showMap(coords){
 	 var googleLatLong=new google.maps.LatLng(coords.latitude, coords.longitude);
 	 var mapOptins={
@@ -107,13 +101,8 @@ function showMap(coords){
    //計算距離要用的座標陣列,要用latitude, longitude
    coordsArray.push({latitude:coords.latitude, longitude:coords.longitude});
    console.log(flightPlanCoordinates);
-
-  
    addMarker(map, googleLatLong, title, content);
-
-
 }
-
 
 function addMarker(map, latlong, title, content){
 	var markerOptions={
@@ -134,8 +123,6 @@ function addMarker(map, latlong, title, content){
 		infoWindow.open(map);
 	});
 }
-
-
 
 function scrollMapToPosition(coords){
 	var latitude=coords.latitude;
@@ -218,6 +205,8 @@ var x=0;
 var y=0;
 var z;
 function runningStart(){
+	  $('.note').hide();
+	  getLocation();
 		sec=document.getElementById("sec");
 		intervalId= window.setInterval(conuntSec, 1000); 
 		intervalId1= window.setInterval(conuntMin, 60000); 
@@ -245,22 +234,3 @@ function conuntSec(){
 //消耗卡洛里
 
 var weight;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
