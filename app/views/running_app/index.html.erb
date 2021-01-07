@@ -3,22 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <title>標題</title>
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
-<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script src="https://maps.google.com/maps/api/js?sensor=false"></script>
-
-<script type="text/javascript" src="distance.js"></script>
 </head>
 
 <body>
 
 <div class="wrapper">
 
-    <header>
-
+    <header class="h_class">
         <div class="left item">
-            <p>DISTANCE</p>
+            <p class="p_color">DISTANCE</p>
             <h1 id="distance">0m</h1>
             <div class="face">
             <%= image_tag('running_app/smile.png') %>
@@ -43,7 +36,7 @@
     <div id="map"></div>
 
     <div class="btn-wrap">
-        <a href="#" class="btn1" onClick="init();">START</a><a href="#" class="btn2" onClick="clearTimer();">PAUSE</a><a href="#" id="setBtn" class="btn2">設定</a>
+        <a href="#" class="btn1" onClick="runningStart();">START</a><a href="#" class="btn2" onClick="clearTimer();">PAUSE</a><a href="#" id="setBtn" class="btn2">設定</a>
     </div>
 
 </div>

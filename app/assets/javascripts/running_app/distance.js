@@ -6,6 +6,9 @@ var flightPlanCoordinates = [];
 var coordsArray=[];
 var distanceArray=[];
 
+
+window.onload=getLocation;
+
 function getLocation(){
 	if(navigator.geolocation){
 		//navigator.geolocation.getCurrentPosition(watchLocation);
@@ -214,8 +217,7 @@ var intervalId1;
 var x=0;
 var y=0;
 var z;
-function init(){
-    getLocation();
+function runningStart(){
 		sec=document.getElementById("sec");
 		intervalId= window.setInterval(conuntSec, 1000); 
 		intervalId1= window.setInterval(conuntMin, 60000); 
@@ -237,8 +239,28 @@ function conuntSec(){
 	 x=x+1;
 	 z=x%60;
 	sec.innerHTML=z; //像數字的字串
+		
 }
 
 //消耗卡洛里
 
 var weight;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
