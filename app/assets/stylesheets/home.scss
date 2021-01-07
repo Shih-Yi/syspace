@@ -5,12 +5,47 @@ body{
 }
 
 p{
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'helvetica', sans-serif;
   display:block;
   text-align:center;
   color: #fff;
   margin-bottom: 1em;
 }
+
+.dropbtn {
+  background-color: #fff;
+  color: rgb(103, 109, 121);
+  padding: 15px;
+  font-size: 15px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #ddd;}
 
 #header{
 	display: block;
@@ -84,6 +119,18 @@ p{
 		background-attachment: scroll;
 		background-repeat:no-repeat;
 }
+.name_background {
+	background-color: rgba(0,0,0, 0.5);
+  width: 380px;
+	padding-left: 0px;
+	margin: 0 170px;
+}
+.name_background2 {
+	background-color: rgba(0,0,0, 0.5);
+  width: 250px;
+	padding-left: 0px;
+	margin: 0 600px;
+}
 	.intro_word{
 		display: block;
 		font-size: 4.25em;
@@ -91,7 +138,7 @@ p{
 		line-height: 1em;
 		letter-spacing: -4px;
 		font-weight: 900;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'helvetica', 'ariel', sans-serif;
 		margin-bottom: 17px;
 		text-align: center;
 		width: 720px;
@@ -102,7 +149,13 @@ p{
 	}
 
 	.intro_word2{
-		padding-bottom: 10em;
+		color: #fff;
+		font-size: 2em;
+		font-family: 'helvetica', 'ariel', sans-serif;
+	}
+
+	.intro_word3{
+		padding-bottom: 5em;
 	}
 
 	#featured {
@@ -129,13 +182,14 @@ p{
 .blurb {
 	width: 60%;
 	text-align: left;
+	margin-right: 30px;
 }
 
 .work_title{
 	font-size: 30px;
 }
 .work_content{
-	font-size: 20px;
+	font-size: 1.3em;
 	margin-top: 20px;
 }
 .wrapper {
@@ -198,7 +252,7 @@ p{
 	padding: 0px;
 	/*border: black 5px solid;*/
 	text-align:center;
-	background-color: #474747;
+	background-color: #fff;
 }
 
 #three{
@@ -236,7 +290,7 @@ p{
 #work{
 	position: absolute;
 	width:100%;
-	height: 1460px;
+	height: 900px;
 	top: 2920px;
 	left: 0;
 	background-color: #fff;
@@ -251,7 +305,7 @@ p{
 		letter-spacing: -4px;
 		font-weight: 900;
 		font-family: 'Source Sans Pro', sans-serif;
-		margin-bottom: 17px;
+		margin-bottom: 30px;
 		text-align: center;
 		width: 720px;
 		height: 74px;

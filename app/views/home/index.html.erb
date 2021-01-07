@@ -6,7 +6,6 @@
 	<link href="/assets/home.scss" media="screen" rel="stylesheet" />
 	<script type="text/javascript">
 	</script>
-	<link href="/assets/home.scss" media="screen" rel="stylesheet" />
 </head>
 <body>
 	<header id="header">
@@ -14,9 +13,17 @@
 		<nav id="nav">
 			<ul>
 				<li><a href="#intro">Intro</a></li>
-				<li><a href="#one">What I do</a></li>
-				<li><a href="#two">Who I am</a></li>
-				<li><a href="#work">My work</a></li>
+				<li>
+					<div class="dropdown">
+						<button class="dropbtn">Recent Work</button>
+						<div class="dropdown-content">
+							<a href="#one">LucidPix</a>
+							<a href="#two">Matchnow</a>
+							<a href="#three">Amaze</a>
+						</div>
+					</div>
+				</li>
+				<li><a href="#work">My Work</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
@@ -27,12 +34,12 @@
 	<section id="intro" class="main style1 dark fullscreen">
 		<div>
 			<header>
-				<h2 class="intro_word">Hey.</h2>
+				<h2 class="intro_word">
+					<div class="name_background">Shih-Yi Chien</div>
+				</h2>
 			</header>
 			<div class="intro_word2">
-			<P>
-			Welcome to <strong>My Space</strong> a responsive site template designed Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</P>
-			<p> Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					<div class="name_background2">A Web Developer</div>
 			</div>
 			<footer>
 			<a href="#intro" class="button" ></a>
@@ -44,10 +51,14 @@
 	<section id="one" class="main style1 dark fullscreen">
 		<div class="wrapper">
 			<div class="blurb">
-				<div class="work_title"><strong>LucidPix APP, A 3D Photos app</strong></div>
-				<div class="work_content">Build backstage website with firebase(NoSQL)</div>
+				<div class="work_title"><strong>LucidPix APP, a 3D photos app</strong></div>
+				<div class="work_content">Build backstage website with firebase (NoSQL)</div>
 			</div>
-			<div class="featured"><%= image_tag('home/work2.jpeg', class: 'work_img') %></div>
+			<div class="featured">
+			  <a href="https://www.lucidpix.com/" target="_blank">
+			    <%= image_tag('home/work2.jpeg', class: 'work_img') %>
+				</a>
+			</div>
 		</div>
 		<footer>
 			<a href="#one" class="button" ></a>
@@ -58,10 +69,14 @@
   <section id="two" class="main style1 dark fullscreen">
 		<div class="wrapper">
 			<div class="blurb">
-				<div class="work_title"><strong>Amaze, A clothing rental online service</strong></div>
-				<div class="work_content">Coupon System, Friend Invitation, Dashboard Chart</div>
+				<div class="work_title"><strong>Matchnow, a service helps businesses match influencer</strong></div>
+				<div class="work_content">e-Signature integration, Facebook login & Instagram API integration</div>
 			</div>
-			<div class="featured"><%= image_tag('home/work1.png', class: 'work_img') %></div>
+			<div class="featured">
+				<a href="https://www.matchnow.co/" target="_blank">
+			    <%= image_tag('home/work1.png', class: 'work_img') %>
+				</a>
+			</div>
 		</div>
 	</section>
 
@@ -69,10 +84,14 @@
   <section id="three" class="main style1 dark fullscreen">
 		<div class="wrapper">
 			<div class="blurb">
-				<div class="work_title"><strong>Amaze, A clothing rental online service</strong></div>
-				<div class="work_content">Coupon System, Friend Invitation, Dashboard Chart</div>
+				<div class="work_title"><strong>Amaze, a clothing rental online service</strong></div>
+				<div class="work_content">Coupon system, Friend invitation, Dashboard chart</div>
 			</div>
-			<div class="featured"><%= image_tag('home/work3.png', class: 'work_img') %></div>
+			<div class="featured">
+				<a href="https://www.amazefashion.com.tw/" target="_blank">
+			    <%= image_tag('home/work3.png', class: 'work_img') %>
+				</a>
+			</div>
 		</div>
 	</section>
 
@@ -86,8 +105,7 @@
 			</header>
 			<div class="work_word2">
 
-			<strong>My Space</strong> a responsive site template designed Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</br>
-			Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+				<div class="work_content">A running APP, HTML/CSS Template</div>
 			</div>
 
 			<!-- Gallery  -->
@@ -95,14 +113,16 @@
 					<!-- <div class="big">
 					<img id="bigImg" src="image/01.jpg">
 					</div> -->
-					<div style="display:block;">
+					<div>
 						<div class="image_left">
-							<%= image_tag('home/03.jpg', class: 'image_left') %>
-						</div>
-						<div class="image_center">
+							<a href="https://running-app.syichien.com/" target="_blank">
+								<%= image_tag('home/work4.png', class: 'image_left') %>
+							</a>
 						</div>
 						<div class="image_right">
-							<%= image_tag('home/work4.png', class: 'image_right') %>
+						  <a href="https://practice.syichien.com/" target="_blank">
+								<%= image_tag('home/03.jpg', class: 'image_right') %>
+							</>
 						</div>
 					</div>
 				</div>
